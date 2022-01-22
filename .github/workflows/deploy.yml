@@ -10,46 +10,20 @@ env:
   app: publish-app
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+            
+    - name: Build dist
+      working-directory: asdc.web
+      run: npm run build -- --dest ${{env.app}}
+           
+    - name: Deploy to Azure
+      uses: azure/webapps-deploy@v2
       with:
-        dotnet-version: 6.0.x
-        
-    - name: Restore dependencies
-      run: dotnet restore
-      
-    - name: Publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/publish
-      
-    - name: Upload Publish artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: ${{env.app}}
-        path: ${{env.DOTNET_ROOT}}/publish
-      
-  deploy:
-    runs-on: ubuntu-latest
-    needs: [build]
-    
-    steps:
-      - name: Get Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: ${{env.app}}
-          path: app
-          
-      - name: Deploy to Azure
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'autio-software'
-          slot-name: 'production'
-          publish-profile: ${{ secrets.WEB_PUBLISH_PROFILE }}
-          package: 'app'
-
-      
+        app-name: 'autio-software'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.WEB_PUBLISH_PROFILE }}
+        package: '${{env.app}}'
