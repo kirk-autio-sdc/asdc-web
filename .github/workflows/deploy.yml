@@ -26,4 +26,4 @@ jobs:
         app-name: 'autio-software'
         slot-name: 'production'
         publish-profile: ${{ secrets.WEB_PUBLISH_PROFILE }}
-        package: '${{env.app}}'
+        package: 'asdc.web/${{env.app}}'
