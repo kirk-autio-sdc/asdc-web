@@ -15,6 +15,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: NPM Install
+      working-directory: asdc.web
+      run: npm install
             
     - name: Build dist
       working-directory: asdc.web
