@@ -1,0 +1,7 @@
+D:\Projects\ASDC\ASDC.Cloud\app\ASDC.Web.exe
+D:\Projects\ASDC\ASDC.Cloud\app\appsettings.Development.json
+D:\Projects\ASDC\ASDC.Cloud\app\appsettings.json
+D:\Projects\ASDC\ASDC.Cloud\app\ASDC.Web.dll
+D:\Projects\ASDC\ASDC.Cloud\app\ASDC.Web.deps.json
+D:\Projects\ASDC\ASDC.Cloud\app\ASDC.Web.runtimeconfig.json
+D:\Projects\ASDC\ASDC.Cloud\app\ASDC.Web.pdb
