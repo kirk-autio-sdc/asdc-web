@@ -25,7 +25,7 @@ jobs:
       run: dotnet restore
       
     - name: Publish
-      run: dotnet public -c Release -o ${{env.DOTNET_ROOT}}/publish
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/publish
       
     - name: Upload Publish artifacts
       uses: actions/upload-artifact@v2
