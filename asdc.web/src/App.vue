@@ -1,12 +1,15 @@
 <template>
-  <div id="nav">
-    <img alt="logo" src="/logo.png" />
+  <header id="nav">
+    <img alt="logo" src="/logo-txt.png" />
     <div class="routes">
       <router-link to="/">Home</router-link>
+      <router-link to="/standards">Standards</router-link>
       <router-link to="/about">About</router-link>
     </div>
-  </div>
-  <router-view />
+  </header>
+  <main>
+    <router-view />
+  </main>
 </template>
 
 <style lang="scss">
@@ -20,32 +23,30 @@
 
 #nav {
   margin-bottom: 30px;
-  background-color: antiquewhite;
+  background-color: #222;
   display: flex;
   width: 100%;
   height: 85px;
-  align-items: center;
   
   .routes {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto 0 auto 0;
     max-width: 1000px;
     
     a {
       display: inline-flex;
-      width: 100px;
+      margin: auto 50px auto 0;
       text-decoration: none;
       font-weight: bold;
-      color: #666;
+      color: lightgray;
 
       &.router-link-exact-active {
-        color: #FF914D;
+        color: white;
       }
     }
   }
   
   img {
-    height: 120px;
+    height: 100%;
   }
 }
 </style>
