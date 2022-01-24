@@ -1,6 +1,9 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Standards from "@/views/Standards.vue";
+import SourceControl from "@/views/Standards/SourceControl.vue";
+import CodeStandards from "@/views/Standards/Code.vue";
+import TestStandards from "@/views/Standards/TestStandards.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -11,7 +14,26 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/standards",
     name: "Standards",
-    component: Standards
+    component: Standards,
+    children: [
+      {
+        path: '',
+        component: CodeStandards
+      },
+      {
+        path: 'sourceControl',
+        component: SourceControl
+      },
+      {
+        path: 'testing',
+        component: TestStandards
+      }
+    ]
+  },
+  {
+    path: "/standards/sourceControl",
+    name: "SourceControl",
+    component: SourceControl
   },
   {
     path: "/about",
