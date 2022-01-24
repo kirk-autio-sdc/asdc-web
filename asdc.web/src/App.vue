@@ -18,7 +18,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #333;
+  color: lightgray;
 }
 
 #nav {
@@ -29,7 +29,7 @@
   height: 85px;
   
   .routes {
-    margin: auto 0 auto 0;
+    margin: auto 0;
     max-width: 1000px;
     
     a {
@@ -48,5 +48,9 @@
   img {
     height: 100%;
   }
+}
+
+h3 {
+  color: #7ed957;
 }
 </style>
