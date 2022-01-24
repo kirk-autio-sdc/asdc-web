@@ -18,19 +18,14 @@ export default class Standards extends Vue {}
 </script>
 
 <style scoped lang="scss">
-  .standards {
-    max-width: 1000px;
-    margin: auto;
-    
-    a {
-      margin: 0 50px 0 0;
-      text-decoration: none;
-      font-weight: bold;
-      color: white;
+  a {
+    margin: 0 50px 0 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
 
-      &.router-link-exact-active {
-        color: #ff914d;
-      }
+    &.router-link-exact-active {
+      color: #ff914d;
     }
   }
 

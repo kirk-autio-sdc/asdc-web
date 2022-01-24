@@ -1,3 +1,50 @@
 ﻿body {
   margin: 0;
+  background-color: #333;
+}
+
+main { 
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1000px;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: lightgray;
+}
+
+#nav {
+  margin-bottom: 30px;
+  background-color: #222;
+  display: flex;
+  height: 85px;
+
+  .routes {
+    margin: auto 0;
+    max-width: 1000px;
+
+    a {
+      display: inline-flex;
+      margin: auto 50px auto 0;
+      text-decoration: none;
+      font-weight: bold;
+      color: lightgray;
+
+      &.router-link-exact-active {
+        color: white;
+      }
+    }
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+h3 {
+  color: #7ed957;
 }
