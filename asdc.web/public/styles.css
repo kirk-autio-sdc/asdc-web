@@ -1,14 +1,9 @@
-﻿$orange: #ff914d;
-$green: #7ed957;
-$dark-grey: #222;
-$grey: #444;
-
 body {
   margin: 0;
   background-color: #333;
 }
 
-main { 
+main {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1000px;
@@ -27,33 +22,31 @@ main {
   background-color: #222;
   display: flex;
   height: 85px;
-
-  .routes {
-    margin: auto 0;
-    max-width: 1000px;
-
-    a {
-      display: inline-flex;
-      margin: auto 50px auto 0;
-      text-decoration: none;
-      font-weight: bold;
-      color: lightgray;
-
-      &.router-link-exact-active {
-        color: white;
-      }
-    }
-  }
-
-  img {
-    height: 100%;
-  }
+}
+#nav .routes {
+  margin: auto 0;
+  max-width: 1000px;
+}
+#nav .routes a {
+  display: inline-flex;
+  margin: auto 50px auto 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: lightgray;
+}
+#nav .routes a.router-link-exact-active {
+  color: white;
+}
+#nav img {
+  height: 100%;
 }
 
 h3 {
-  color: $green;
+  color: #7ed957;
 }
 
 .indent {
   padding: 0 1rem;
 }
+
+/*# sourceMappingURL=styles.css.map */

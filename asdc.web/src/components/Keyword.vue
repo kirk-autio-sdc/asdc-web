@@ -18,7 +18,9 @@ import {Options, Vue} from "vue-class-component";
 export default class Keyword extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  @import "public/styles";
+  
   .keyword {
     color: #6C95EB;
   }
@@ -28,10 +30,11 @@ export default class Keyword extends Vue {}
   }
 
   .method {
-    color: #39cc8f;
+    color: $orange;
   }
   
-  .class {
+  .class,
+  .property {
     color: #c191ff;
   }
 </style>
