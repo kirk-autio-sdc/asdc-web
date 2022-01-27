@@ -24,3 +24,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+public/**/*.js
+public/**/*.css.map
+public/**/*.css

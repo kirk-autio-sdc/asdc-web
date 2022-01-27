@@ -9,6 +9,4 @@ import { Options, Vue } from "vue-class-component";
 export default class TestStandards extends Vue {}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

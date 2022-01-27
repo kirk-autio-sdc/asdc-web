@@ -3,9 +3,7 @@
     <template #header>
       <h3>2. Make code readable</h3>
     </template>
-    <template #content>
-      
-    </template>
+    <template #content> </template>
   </accordion>
 </template>
 
@@ -19,6 +17,4 @@ import Accordion from "@/components/Accordion.vue";
 export default class CodeSentence extends Vue {}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

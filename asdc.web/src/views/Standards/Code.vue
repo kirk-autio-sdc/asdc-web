@@ -16,5 +16,4 @@ import CodeSentence from "@/views/Standards/CodeSentence.vue";
 export default class CodeStandards extends Vue {}
 </script>
 
-<style scoped lang="scss"> 
-</style>
+<style scoped lang="scss"></style>

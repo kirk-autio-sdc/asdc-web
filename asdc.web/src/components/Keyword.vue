@@ -30,7 +30,7 @@ export default class Keyword extends Vue {}
   }
 
   .method {
-    color: $orange;
+    color: $light-orange;
   }
   
   .class,
