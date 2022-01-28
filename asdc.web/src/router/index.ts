@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Standards from "@/views/Standards.vue";
 import SourceControl from "@/views/Standards/SourceControl.vue";
-import CodeStandards from "@/views/Standards/Code.vue";
+import CodeStandards from "@/views/Standards/CodeConsistent.vue";
 import TestStandards from "@/views/Standards/TestStandards.vue";
 
 const routes: Array<RouteRecordRaw> = [

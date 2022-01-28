@@ -1,4 +1,8 @@
 ﻿<template>
+  <div>
+    Quality Assurance should be automated as much as possible.  With a proper CI/CD solution errors can be caught before they are deployed to a production build.  Autio Software stores its source in 
+    <a href="https://github.com/kirk-autio-sdc/asdc-web" target="_blank">GitHub</a> with triggered Actions.  When code is checked into a branch an action is triggered to ensure that the project will build and that all tests pass.
+  </div>
   <h3>GitHub</h3>
   <div>
     GitHub is free to use and is an excellent tool for maintaining source for an entire team to use.

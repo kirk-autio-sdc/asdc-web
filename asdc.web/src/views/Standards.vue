@@ -1,8 +1,8 @@
 ﻿<template>
   <div class="standards">
     <div class="standardLinks">
-      <router-link to="/standards/">Code</router-link>
-      <router-link to="/standards/sourceControl">Source Control</router-link>
+      <router-link to="/standards/">Write maintainable code</router-link>
+      <router-link to="/standards/sourceControl">Continuous Integration/Delivery</router-link>
       <router-link to="/standards/testing">Testing</router-link>
     </div>
     <div class="standardContent">
