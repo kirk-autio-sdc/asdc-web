@@ -33,8 +33,11 @@ export default class Keyword extends Vue {}
     color: $light-orange;
   }
   
-  .class,
-  .property {
+  .class {
     color: #c191ff;
+  }
+  
+  .property {
+    color: #66C3CC;
   }
 </style>

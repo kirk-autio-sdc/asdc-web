@@ -32,7 +32,7 @@
       <keyword value="public class" /> <keyword type="class" value="PascalCase" />
       <br /><br />
       <comment>exposed properties should be PascalCase</comment>
-      <keyword value="public property" /> <keyword type="property" value="PascalCase" /> { <keyword type="method" value="get"/>; }
+      <keyword value="public property" /> <keyword type="property" value="PascalCase" /> { <keyword value="get"/>; }
       <br /><br />
       <comment>constants should be UPPER_SNAKE_CASE</comment>
       <keyword value="const int" /> UPPER_SNAKE_CASE = <keyword type="constant" value="1" />;
@@ -60,7 +60,7 @@
     <div>
       Keep nesting to a minimum. Deeply nested code is hard to read.  Nesting can be reduced by exiting methods early.  It is also good practise to assert parameter values at the top of methods and exit/throw exceptions early.
       <code-block kind="bad">
-        <keyword value="public void" /> <keyword type="method" /> (<keyword type="class" value="Response" /> response)<br />
+        <keyword value="public void" /> <keyword type="method" value="Method"/>(<keyword type="class" value="Response" /> response)<br />
         {
         <div class="indent">
           <keyword value="if" /> (response.Success)<br />
@@ -73,7 +73,7 @@
         }
       </code-block>
       <code-block kind="good">
-        <keyword value="public void" /> <keyword type="method" /> (<keyword type="class" value="Response" /> response)<br />
+        <keyword value="public void" /> <keyword type="method" value="Method"/>(<keyword type="class" value="Response" /> response)<br />
         {
         <div class="indent">
           <keyword value="if" /> (!response.Success) <keyword value="return" />;<br />
