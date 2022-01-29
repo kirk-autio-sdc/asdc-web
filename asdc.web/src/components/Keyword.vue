@@ -11,14 +11,16 @@ import {Options, Vue} from "vue-class-component";
     type: {
       type: String,
       default: "keyword",
-      validator: (value: string) => ["keyword", "constant", "method", "class"].includes(value)
+      validator: (value: string) => ["keyword", "constant", "method", "class", "property"].includes(value)
     }
   }
 })
 export default class Keyword extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  @import "public/styles";
+  
   .keyword {
     color: #6C95EB;
   }
@@ -28,10 +30,11 @@ export default class Keyword extends Vue {}
   }
 
   .method {
-    color: #39cc8f;
+    color: $light-orange;
   }
   
-  .class {
+  .class,
+  .property {
     color: #c191ff;
   }
 </style>

@@ -1,4 +1,6 @@
-﻿body {
+﻿@import "variables";
+
+body {
   margin: 0;
   background-color: #333;
 }
@@ -7,6 +9,12 @@ main {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1000px;
+}
+
+a {
+  color: $green;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 #app {
@@ -34,7 +42,7 @@ main {
       font-weight: bold;
       color: lightgray;
 
-      &.router-link-exact-active {
+      &.router-link-active {
         color: white;
       }
     }
@@ -46,5 +54,9 @@ main {
 }
 
 h3 {
-  color: #7ed957;
+  color: $green;
+}
+
+.indent {
+  padding: 0 1rem;
 }

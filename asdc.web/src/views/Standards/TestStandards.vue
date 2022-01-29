@@ -1,5 +1,7 @@
 ﻿<template>
-  <div class="testStandards"></div>
+  <div class="testStandards">
+    
+  </div>
 </template>
 
 <script lang="ts">
@@ -9,6 +11,4 @@ import { Options, Vue } from "vue-class-component";
 export default class TestStandards extends Vue {}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
