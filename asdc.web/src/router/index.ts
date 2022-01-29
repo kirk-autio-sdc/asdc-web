@@ -4,6 +4,7 @@ import Standards from "@/views/Standards.vue";
 import SourceControl from "@/views/Standards/SourceControl.vue";
 import CodeStandards from "@/views/Standards/CodeConsistent.vue";
 import TestStandards from "@/views/Standards/TestStandards.vue";
+import CodeExtensible from "@/views/Standards/CodeExtensible.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -21,6 +22,10 @@ const routes: Array<RouteRecordRaw> = [
         component: CodeStandards
       },
       {
+        path: 'codeExtensible',
+        component: CodeExtensible
+      },
+      {
         path: 'sourceControl',
         component: SourceControl
       },
@@ -29,11 +34,6 @@ const routes: Array<RouteRecordRaw> = [
         component: TestStandards
       }
     ]
-  },
-  {
-    path: "/standards/sourceControl",
-    name: "SourceControl",
-    component: SourceControl
   },
   {
     path: "/about",

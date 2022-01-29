@@ -11,7 +11,7 @@ import {Options, Vue} from "vue-class-component";
     type: {
       type: String,
       default: "keyword",
-      validator: (value: string) => ["keyword", "constant", "method", "class"].includes(value)
+      validator: (value: string) => ["keyword", "constant", "method", "class", "property"].includes(value)
     }
   }
 })

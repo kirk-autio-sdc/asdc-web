@@ -2,8 +2,9 @@
   <div class="standards">
     <div class="standardLinks">
       <router-link to="/standards/">Write maintainable code</router-link>
+      <router-link to="/standards/codeExtensible/">Write extensible code</router-link>
       <router-link to="/standards/sourceControl">Continuous Integration/Delivery</router-link>
-      <router-link to="/standards/testing">Testing</router-link>
+<!--      <router-link to="/standards/testing">Testing</router-link>-->
     </div>
     <div class="standardContent">
       <router-view></router-view>
