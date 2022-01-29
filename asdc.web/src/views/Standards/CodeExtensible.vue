@@ -10,9 +10,9 @@
         <keyword value="public class" /> <keyword type="class" value="Address" /><br />
         { <br />
         <div class="indent">
-          <keyword value="public" /> <keyword type="class" value="string" /> PostalCode { <keyword value="get" />; <keyword value="set" /> }<br />
-          <keyword value="public" /> <keyword type="class" value="string" /> Street { <keyword value="get" />; <keyword value="set" /> }<br />
-          <keyword value="public" /> <keyword type="class" value="string" /> City { <keyword value="get" />; <keyword value="set" /> }
+          <keyword value="public" /> <keyword type="class" value="string" /> <keyword type="property" value="PostalCode"/> { <keyword value="get" />; <keyword value="set" /> }<br />
+          <keyword value="public" /> <keyword type="class" value="string" /> <keyword type="property" value="Street"/> { <keyword value="get" />; <keyword value="set" /> }<br />
+          <keyword value="public" /> <keyword type="class" value="string" /> <keyword type="property" value="City"/> { <keyword value="get" />; <keyword value="set" /> }
         </div>
         }
       </code-block> 
@@ -25,17 +25,17 @@
           {<br />
           <div class="indent">
             <keyword value="if" /> (!addressChecker.IsValid(street, postalCode, city))<br />
-            <div class="indent"><keyword value="throw new" /> <keyword value="method" /> AddressException(<keyword type="constant" value="&quot;Invalid Address&quot;" />);</div>
+            <div class="indent"><keyword value="throw new" /> <keyword value="method" /> <keyword type="method" value="AddressException" />(<keyword type="constant" value="&quot;Invalid Address&quot;" />);</div>
             <br />
-            PostalCode = postalCode;<br />
-            Street = street;<br />
-            City = city;
+            <keyword type="property" value="PostalCode"/> = postalCode;<br />
+            <keyword type="property" value="Street"/> = street;<br />
+            <keyword type="property" value="City"/> = city;
           </div>
           }<br />
           <br />
-          <keyword value="public" /> <keyword type="class" value="string" /> PostalCode { <keyword value="get" />; }<br />
-          <keyword value="public" /> <keyword type="class" value="string" /> Street { <keyword value="get" />; }<br />
-          <keyword value="public" /> <keyword type="class" value="string" /> City { <keyword value="get" />; }
+          <keyword value="public" /> <keyword type="class" value="string" /> <keyword type="property" value="PostalCode"/> { <keyword value="get" />; }<br />
+          <keyword value="public" /> <keyword type="class" value="string" /> <keyword type="property" value="Street"/> { <keyword value="get" />; }<br />
+          <keyword value="public" /> <keyword type="class" value="string" /> <keyword type="property" value="City"/> { <keyword value="get" />; }
         </div>
         }
       </code-block>
@@ -47,21 +47,21 @@
         <keyword value="public abstract class" /> <keyword type="class" value="Container" /><br />
         { <br />
         <div class="indent">
-          <keyword value="public abstract" /> <keyword type="class" value="string" /> Color { <keyword value="get" />; }<br />
+          <keyword value="public abstract" /> <keyword type="class" value="string" /> <keyword type="property" value="Color"/> { <keyword value="get" />; }<br />
         </div>
         }<br />
         <br />
         <keyword value="public class" /> <keyword type="class" value="WarningContainer" /> : <keyword type="class" value="Container" /><br />
         { <br />
         <div class="indent">
-          <keyword value="public override" /> <keyword type="class" value="string" /> Color => <keyword type="constant" value="&quot;Orange&quot;" /><br />
+          <keyword value="public override" /> <keyword type="class" value="string" /> <keyword type="property" value="Color"/> => <keyword type="constant" value="&quot;Orange&quot;" /><br />
         </div>
         }<br />
         <br />
         <keyword value="public class" /> <keyword type="class" value="ErrorContainer" /> : <keyword type="class" value="Container" /><br />
         { <br />
         <div class="indent">
-          <keyword value="public override" /> <keyword type="class" value="string" /> Color => <keyword type="constant" value="&quot;Red&quot;" /><br />
+          <keyword value="public override" /> <keyword type="class" value="string" /> <keyword type="property" value="Color"/> => <keyword type="constant" value="&quot;Red&quot;" /><br />
         </div>
         }
       </code-block>
@@ -74,11 +74,11 @@
           <keyword value="public" /> Container(<keyword type="class" value="IStatusChecker" /> statusChecker, <keyword type="class" value="Status" /> status)<br />
           {<br />
           <div class="indent">
-            Color = statusChecker.ColorFor(status);
+            <keyword type="property" value="Color"/> = statusChecker.ColorFor(status);
           </div>
           }<br />
           <br />
-          <keyword value="public" /> <keyword type="class" value="string" /> Color { <keyword value="get" />; }<br />
+          <keyword value="public" /> <keyword type="class" value="string" /> <keyword type="property" value="Color"/> { <keyword value="get" />; }<br />
         </div>
         }
       </code-block>
