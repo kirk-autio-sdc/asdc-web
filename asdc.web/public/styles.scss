@@ -5,10 +5,10 @@ body {
   background-color: #333;
 }
 
-main { 
+.content {
   margin: 0 auto;
-  padding: 0 15px;
   max-width: 1000px;
+  min-width: 600px;
 }
 
 a {
@@ -30,7 +30,9 @@ a {
   background-color: #222;
   display: flex;
   height: 85px;
-
+  width: 100%;
+  min-width: 600px;
+  
   .routes {
     margin: auto 0;
     max-width: 1000px;
@@ -59,4 +61,20 @@ h3 {
 
 .indent {
   padding: 0 1rem;
+}
+
+.underline {
+  position: relative;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 7px;
+    width: 100%;
+    border: solid 2px $orange;
+    border-color: $orange transparent transparent transparent;
+    border-radius: 30%;
+  }
 }

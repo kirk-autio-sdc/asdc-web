@@ -1,5 +1,5 @@
 ﻿<template>
-  <div class="standards">
+  <div class="standards content">
     <div class="standardLinks">
       <router-link to="/standards/">Write maintainable code</router-link>
       <router-link to="/standards/codeExtensible/">Write extensible code</router-link>
