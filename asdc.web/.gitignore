@@ -28,3 +28,4 @@ pnpm-debug.log*
 public/**/*.js
 public/**/*.css.map
 public/**/*.css
+/package-lock.json
