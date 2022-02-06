@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Standards from "@/views/Standards.vue";
 import SourceControl from "@/views/Standards/SourceControl.vue";
@@ -19,18 +19,22 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '',
+        name: 'CodeStandards',
         component: CodeStandards
       },
       {
         path: 'codeExtensible',
+        name: 'ExtensibleCode',
         component: CodeExtensible
       },
       {
         path: 'sourceControl',
+        name: 'SourceControl',
         component: SourceControl
       },
       {
         path: 'testing',
+        name: 'Testing',
         component: TestStandards
       }
     ]
@@ -50,5 +54,12 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
 });
+
+router.afterEach((to: RouteLocationNormalized) => {
+  (<any>window).gtag('event', 'page_view', { 
+    page_title: to.name,
+    page_path: to.path,
+  });
+})
 
 export default router;
