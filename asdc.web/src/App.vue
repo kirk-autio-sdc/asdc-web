@@ -21,7 +21,7 @@
 
 
 <script lang="ts">
-import LinkedIn from "@/icons/linkedIn";
+import LinkedIn from "@/icons/linkedIn.vue";
 import {Options, Vue} from "vue-class-component";
 
 @Options({
