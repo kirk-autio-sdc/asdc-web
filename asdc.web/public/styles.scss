@@ -8,12 +8,10 @@ body {
 .content {
   margin: 0 auto;
   max-width: 1000px;
-  min-width: 600px;
 }
 
 a {
   color: $green;
-  font-weight: bold;
   text-decoration: none;
 }
 
@@ -25,34 +23,11 @@ a {
   color: lightgray;
 }
 
-#nav {
-  margin-bottom: 30px;
-  background-color: #222;
-  display: flex;
-  height: 85px;
-  width: 100%;
-  min-width: 600px;
-  
-  .routes {
-    margin: auto;
-    max-width: 1000px;
-
-    a {
-      display: inline-flex;
-      margin: auto 50px auto 0;
-      text-decoration: none;
-      font-weight: bold;
-      color: lightgray;
-
-      &.router-link-active {
-        color: white;
-      }
-    }
-  }
-
-  img {
-    height: 100%;
-  }
+hr {
+  background-color: $orange;  
+  border: none;
+  height: 1px;
+  margin: 15px;
 }
 
 h3 {

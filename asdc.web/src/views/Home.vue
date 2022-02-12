@@ -30,26 +30,26 @@ export default class Home extends Vue {}
 <style scoped lang="scss">
 .banner {
   display: flex;
+  flex-flow: wrap-reverse;
   align-items: center;
   justify-content: center;
   background: $grey;
-  width: 100vw;
-  min-width: 600px
 }
 
 img {
-  object-fit: fill;
-  height: 100%;
-  margin-right: 50px;
+  object-fit: scale-down;
+  max-width: 350px;
 }
 
 .partners {
   display: flex;
-  flex-flow: row;
+  flex-flow: wrap;
   justify-content: center;
   
   & img {
     height: 150px;
   }
 }
+
+
 </style>
