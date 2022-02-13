@@ -60,7 +60,8 @@ export default class App extends Vue {
   img {
     object-fit: contain;
     height: 100%;
-    max-height: 128px;
+    max-height: 85px;
+    align-self: flex-start;
   }
 }
 
@@ -75,7 +76,7 @@ export default class App extends Vue {
   margin-left: 30px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 650px) {
   #nav {
     flex-flow: column;
   }

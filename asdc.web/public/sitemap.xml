@@ -3,18 +3,18 @@
         <loc>http://autio-software.com/</loc>
     </url>
     <url>
-        <loc>http://autio-software.com/standards</loc>
+        <loc>http://autio-software.com/#/standards</loc>
     </url>
     <url>
-        <loc>http://autio-software.com/standards/codeExtensible</loc>
+        <loc>http://autio-software.com/#/standards/codeExtensible</loc>
     </url>
     <url>
-        <loc>http://autio-software.com/standards/sourceControl</loc>
+        <loc>http://autio-software.com/#/standards/sourceControl</loc>
     </url>
     <url>
-        <loc>http://autio-software.com/standards/testing</loc>
+        <loc>http://autio-software.com/#/standards/testing</loc>
     </url>
     <url>
-        <loc>http://autio-software.com/about</loc>
+        <loc>http://autio-software.com/#/about</loc>
     </url>
 </urlset>
