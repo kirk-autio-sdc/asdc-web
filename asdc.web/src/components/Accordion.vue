@@ -13,19 +13,14 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
-@Options({
-  data() {
-    return {
-      open: false
-    };
-  },
-  computed: {
-    openClass() {
-      return this.open ? ["open"] : ["close"];
-    }
+@Options({})
+export default class Accordion extends Vue {
+  public open = false;
+  
+  get openClass(): string[] {
+    return this.open ? ["open"] : ["close"];
   }
-})
-export default class Accordion extends Vue {}
+}
 </script>
 
 <style scoped lang="scss">

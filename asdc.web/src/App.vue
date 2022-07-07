@@ -4,6 +4,7 @@
     <div class="routes">
       <router-link to="/">Home</router-link>
       <router-link to="/standards">Standards</router-link>
+      <router-link to="/games">Games</router-link>
       <router-link to="/about">About</router-link>
     </div>
   </header>

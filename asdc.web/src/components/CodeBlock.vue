@@ -26,23 +26,25 @@ import {Options, Vue} from "vue-class-component";
       type: String,
       default: "C#"
     }
-  },
-  computed: {
-    getClass() {
-      switch (this.kind) {
-        case 'good':
-          return ['good-example'];
-        case 'bad':
-          return ['bad-example'];
-        case 'avoid':
-          return ['avoid-example'];
-      }
-      
-      return "";
-    }
   }
 })
-export default class CodeBlock extends Vue {}
+export default class CodeBlock extends Vue {
+  public kind = "";
+  public lang = "C#";
+  
+  get getClass(): string[] {
+    switch (this.kind) {
+      case 'good':
+        return ['good-example'];
+      case 'bad':
+        return ['bad-example'];
+      case 'avoid':
+        return ['avoid-example'];
+      default:
+        return [];
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
