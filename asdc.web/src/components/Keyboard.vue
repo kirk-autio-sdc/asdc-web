@@ -18,7 +18,7 @@ import {Options, Vue} from "vue-class-component";
   beforeMount() {
     window.onkeydown = (event: KeyboardEvent) => {
       if (/^[a-zA-Z]{1}$/.test(event.key)) {
-        this.$emit('keyPress', event.key);
+        this.$emit('keyPress', event.key.toUpperCase());
         return;
       }
       
@@ -56,7 +56,7 @@ export default class Keyboard extends Vue {
     switch (key) {
       case "\r": return {text: "Enter", style: [...style, "wide"]};
       case "~": return {text: "Delete", style: [...style, "wide"]};
-      default: return {text: key, style: style};
+      default: return {text: key.toUpperCase(), style: style};
     }
   }
 }
@@ -74,6 +74,7 @@ export default class Keyboard extends Vue {
       align-items: center;
       margin: 0.25rem;
       border-radius: 0.5rem;
+      font-weight: bold;
       
       &:active {
         background: $light-orange;

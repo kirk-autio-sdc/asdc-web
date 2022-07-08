@@ -1,7 +1,9 @@
 ﻿<template>
   <div class="content">
-    <div class="guess" v-for="guess in guesses" :key="guess">
-      <div class="kirkle-input" v-for="index in wordLength" :key="index">{{guess?.[index-1]}}</div>
+    <div class="guesses">
+      <div class="guess" v-for="(guess, index) in [...guesses, currentGuess]" :key="index">
+        <div :class="`kirkle-input ${index < guesses.length ? getLetterStyle(guess[letterIndex-1], letterIndex-1) : ''}`" v-for="letterIndex in word.length" :key="letterIndex">{{guess?.[letterIndex-1]}}</div>
+      </div>  
     </div>
     
     <keyboard :key-style="getKeyStyle" @keyPress="handleKeyPress" @delete="deleteLast" @enter="submitGuess" />
@@ -16,27 +18,48 @@ import Keyboard from "@/components/Keyboard.vue";
   components: {Keyboard},
 })
 export default class Kirkle extends Vue {
-  wordLength = 5;
-  guesses = [""];
+  word = "ARISE";
+  success = false;
   
+  currentGuess = "";
+  guesses: string[] = [];
+
   public getKeyStyle(key: string) {
-    return key == "A" 
-      ? ["correct"]
-        : key == "Z" 
-          ? ["wrong"]
-            : key === "B" ? ["miss"] : ["unused"];
+    if (!this.guesses.length || this.guesses.every(g => !g.includes(key))) return ["unused"];
+    
+    let result = "wrong";
+    for (let i = 0; i < this.word.length; i++) {
+      if (this.guesses.some(g => this.word[i] === key && g[i] === key)) return ["correct"];
+      if (this.guesses.some(g => g.includes(key) && this.word.includes(key))) result = "miss";
+    }
+    
+    return [result];
+  }
+  
+  public getLetterStyle(letter: string, letterIndex: number) {
+    return letter !== this.word[letterIndex] 
+        ? this.word.includes(letter) ? "miss" : "wrong"
+        : "correct"; 
   }
 
   public handleKeyPress(key: string) {
-    this.guesses = [...this.guesses.slice(0, -1), this.guesses.slice(-1) + key];
+    this.currentGuess = this.currentGuess + key;
   }
   
   public deleteLast() {
-    this.guesses = [...this.guesses.slice(0,-1), this.guesses.slice(-1)[0].slice(0, -1)];
+    if (!this.currentGuess) return;
+    
+    this.currentGuess = this.currentGuess.slice(0,-1);
   }
   
   public submitGuess() {
-    console.log('submit');
+    if (this.currentGuess === this.word) {
+      this.success = true;
+      return;
+    }
+    
+    this.guesses.push(this.currentGuess);
+    this.currentGuess = "";
   }
 }
 </script>
@@ -48,35 +71,39 @@ export default class Kirkle extends Vue {
     justify-content: center;
     width: 60px;
     height: 60px;
-    font-size: 3.5rem;
+    font-size: 3rem;
     border: 2px solid $grey;
     border-radius: 1rem;
     background: black;
     margin-right: 0.25rem;
   }
   
+  .guesses{
+    margin-bottom: 2rem;
+  }
+  
   .guess {
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
   }
 </style>
 
 <style lang="scss">
   .correct {
-    background: $green;
+    background: $orange !important;
+    color: white !important;
     border: 1px solid white;
   }
   
   .miss {
-    background: $orange;
-    color: white;
+    background: mediumslateblue !important;
+    color: white !important;
     border: 1px solid white;
   }
   
   .wrong {
-    background: $dark-grey;
-    color: white;
+    background: $dark-grey !important;
+    color: white !important;
     border: 1px solid $dark-grey;
   }
   
