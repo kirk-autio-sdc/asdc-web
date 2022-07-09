@@ -19,7 +19,6 @@ a {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: lightgray;
 }
 
@@ -52,4 +51,8 @@ h3 {
     border-color: $orange transparent transparent transparent;
     border-radius: 30%;
   }
+}
+
+.center-text {
+  text-align: center;
 }

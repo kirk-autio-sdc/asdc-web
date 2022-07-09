@@ -5,6 +5,7 @@ import SourceControl from "@/views/Standards/SourceControl.vue";
 import CodeStandards from "@/views/Standards/CodeConsistent.vue";
 import TestStandards from "@/views/Standards/TestStandards.vue";
 import CodeExtensible from "@/views/Standards/CodeExtensible.vue";
+import Kirkle from "@/views/Games/Kirkle.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -38,6 +39,11 @@ const routes: Array<RouteRecordRaw> = [
         component: TestStandards
       }
     ]
+  },
+  {
+    path: "/games",
+    name: "Games",
+    component: Kirkle
   },
   {
     path: "/about",

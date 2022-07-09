@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="content">
-      <h1>Helping businesses succeed since 2020</h1>
+      <h1 class="center-text">Helping businesses succeed since 2020</h1>
       <div class="partners">
         <img src="../assets/aps_logo2000.png" alt="Alberta Pensions Services" />
         <img src="../assets/Alberta-government-logo2.png" alt="Government of Alberta" />

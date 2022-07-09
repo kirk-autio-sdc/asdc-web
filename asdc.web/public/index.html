@@ -9,11 +9,29 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SV4Q7FMZZW"></script>
+      
+    <!-- BEGIN Pre-requisites -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    </script>
+    <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
+    </script>
+    <!-- END Pre-requisites -->
+      
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', 'G-SV4Q7FMZZW');
+    </script>
+    <script>
+      function start() {
+          gapi.load('auth2', function() {
+              window.auth2 = gapi.auth2.init({
+                  client_id: '946886168339-9hgslm83b5u840jjv1l34n2g1nl85p8f.apps.googleusercontent.com',
+                  ux_mode: 'redirect'
+              });
+          });
+      }
     </script>
   </head>
   <body>
