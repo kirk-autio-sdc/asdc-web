@@ -2,7 +2,7 @@
   <div class="content">
     <div class="guesses">
       <div class="guess" v-for="(guess, index) in [...guesses, currentGuess]" :key="index">
-        <div :class="`kirkle-input ${index < guesses.length ? getLetterStyle(guess[letterIndex-1], letterIndex-1) : ''}`" v-for="letterIndex in word.length" :key="letterIndex">{{guess?.[letterIndex-1]}}</div>
+        <div :class="`kirkle-input ${index < guesses.length || success ? getLetterStyle(guess[letterIndex-1], letterIndex-1) : ''}`" v-for="letterIndex in word.length" :key="letterIndex">{{guess?.[letterIndex-1]}}</div>
       </div>  
     </div>
     
@@ -43,6 +43,7 @@ export default class Kirkle extends Vue {
   }
 
   public handleKeyPress(key: string) {
+    console.log(key);
     this.currentGuess = this.currentGuess + key;
   }
   
@@ -53,6 +54,8 @@ export default class Kirkle extends Vue {
   }
   
   public submitGuess() {
+    if (this.currentGuess.length !== this.word.length) return;
+    
     if (this.currentGuess === this.word) {
       this.success = true;
       return;

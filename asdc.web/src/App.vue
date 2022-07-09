@@ -6,6 +6,7 @@
       <router-link to="/standards">Standards</router-link>
       <router-link to="/games">Games</router-link>
       <router-link to="/about">About</router-link>
+      <button @click="initiateLogin">Login</button>
     </div>
   </header>
   <main>
@@ -26,9 +27,17 @@ import LinkedIn from "@/icons/linkedIn.vue";
 import {Options, Vue} from "vue-class-component";
 
 @Options({
-  components: { LinkedIn }
+  components: { LinkedIn },
 })
 export default class App extends Vue {
+  async initiateLogin() {
+      const authResult = await (window as any).auth2.grantOfflineAccess();
+      this.signIn(authResult);
+  }
+  
+  signIn(authResult: any) {
+    console.log(authResult);
+  }
 }
 </script>
 
